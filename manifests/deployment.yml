@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: somudazuredevops 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: somudazuredevops 
+    spec:
+      containers:
+        - name: somudazuredevops 
+          image: sdcontainerreg1.azurecr.io/somudazuredevops
+          ports:
+          - containerPort: 8080
